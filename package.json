@@ -1,0 +1,30 @@
+{
+  "name": "prettier-plugin-import-sort-arg-decorator-bug",
+  "version": "1.0.0",
+  "description": "Reproducible prettier-plugin-import-sort bug with TypeScript argument decorators",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc tsconfig.json --outDir build",
+    "test": "node build/index.js",
+    "lint": "eslint --ext .jsx,.js,.ts,.tsx ."
+  },
+  "author": "bbenoist",
+  "license": "MIT",
+  "repository": "https://github.com/bbenoist/prettier-plugin-import-sort-arg-decorator-bug",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "import-sort-style-module": "^6.0.0",
+    "prettier": "^1.18.2",
+    "prettier-plugin-import-sort": "0.0.3",
+    "typescript": "^3.6.4"
+  },
+  "importSort": {
+    ".js, .jsx, .ts, .tsx": {
+      "style": "module"
+    }
+  }
+}
