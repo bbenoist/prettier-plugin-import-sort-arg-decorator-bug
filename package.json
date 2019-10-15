@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc --pretty",
     "test": "node build/index.js",
-    "lint": "eslint --ext .jsx,.js,.ts,.tsx ."
+    "lint": "eslint --ext .jsx,.js,.ts,.tsx .",
+    "import-sort-cli": "import-sort src/*.ts"
   },
   "author": "bbenoist",
   "license": "MIT",
@@ -17,6 +18,7 @@
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.1",
+    "import-sort-cli": "^6.0.0",
     "prettier": "^1.18.2",
     "typescript": "^3.6.4"
   }

@@ -1,10 +1,10 @@
 # prettier-plugin-import-sort-arg-decorator-bug
 
-[![Build Status](https://travis-ci.org/bbenoist/prettier-plugin-import-sort-arg-decorator-bug.svg?branch=master)](https://travis-ci.org/bbenoist/prettier-plugin-import-sort-arg-decorator-bug)
+[![Build Status](https://travis-ci.org/bbenoist/prettier-plugin-import-sort-arg-decorator-bug.svg?branch=import-sort-cli)](https://travis-ci.org/bbenoist/prettier-plugin-import-sort-arg-decorator-bug)
 
-Reproducible [prettier-plugin-import-sort](https://github.com/ggascoigne/prettier-plugin-import-sort/) bug with TypeScript argument decorators.
+Reproducible [import-sort-cli](https://github.com/renke/import-sort/) bug with TypeScript argument decorators.
 
-[prettier-plugin-import-sort#3](https://github.com/ggascoigne/prettier-plugin-import-sort/issues/3)
+[import-sort-cli#?????](https://github.com/renke/import-sort/issues/?????)
 
 The following valid TypeScript code:
 
@@ -23,13 +23,15 @@ const foo = new MyClass;
 foo.myFunction("hello");
 ```
 
-Gives this error ([full log](https://travis-ci.org/bbenoist/prettier-plugin-import-sort-arg-decorator-bug)):
+Gives this error ([full log (branch `import-sort-cli`)](https://travis-ci.org/bbenoist/prettier-plugin-import-sort-arg-decorator-bug)):
 
 ```txt
-$ npm run-script lint
-> eslint --ext .jsx,.js,.ts,.tsx .
+$ npm run-script import-sort-cli
+> import-sort-cli
 ...
-src/index.ts
-  6:16  error  Parsing error: Stage 2 decorators cannot be used to decorate parameters  prettier/prettier
+> import-sort src/*.ts
+
+src/index.ts:
+SyntaxError: Stage 2 decorators cannot be used to decorate parameters (10:13)
 ...
 ```
