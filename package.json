@@ -4,7 +4,7 @@
   "description": "Reproducible prettier-plugin-import-sort bug with TypeScript argument decorators",
   "main": "build/index.js",
   "scripts": {
-    "build": "tsc tsconfig.json --outDir build",
+    "build": "tsc --pretty",
     "test": "node build/index.js",
     "lint": "eslint --ext .jsx,.js,.ts,.tsx ."
   },
